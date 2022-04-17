@@ -12,15 +12,22 @@ body {
     background-color: rgba(0, 0, 0, 0.295);
     color: white;
 }
-.today-forecast {
-    margin-bottom: 40px;
-}
-.hourly-forecast {
-    margin-bottom: 40px;
-}
+
 .daily-forecast {
+    animation-duration: 3s;
+    animation-name: slidein;
     margin-bottom: 40px;
-}
-.days {
-    padding-top: 50px;
-}
+    overflow: hidden;
+  }
+    
+  @keyframes slidein {
+    from {
+      margin-left: -100%;
+      width: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
