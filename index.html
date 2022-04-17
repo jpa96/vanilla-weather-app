@@ -16,38 +16,32 @@
   
     <nav class="navbar sticky-top navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand text" href="#">Weather? We're With You</a>
-        <br>
-        <div class="navbar-text city">
-          Brisbane
+        <a class="navbar-brand text" href="#">Weather?.. We're With You</a>
+        <div class="navbar-text time-city">
+          <span class="current-time">08:42</span><small> in</small><span class="city"> Brisbane</span>
         </div>
           <form class="d-flex">
-            <input id="search-bar" class="form-control me-2" type="search" placeholder="City" aria-label="Search" style="width: 120px;">
-            <button id="search-button" class="btn btn-outline-light" type="submit" style="width: 40px;">🔎</button>
+            <input id="search-bar" class="form-control me-2" type="search" placeholder="City" aria-label="Search" autofocus="on" autocomplete="off" style="width: 120px; height: 30px;">
+            <button id="search-button" class="btn btn-outline-light" type="submit" style="width: 40px; height: 30px;">🔎</button>
           </form>
         </div>
       </div>
     </nav>
     <div class="container">
       <div class="row">
-        <div class="col-6">Today's Forecast</div>
-        <div class="col-6"></div>
+        <div class="col-12 today-date">Wednesday, 28th March 2022</div>
+        <div class="col-12 forecast-title">Forecast</div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-6 today-forecast"><span>🌩️</span> <br/> <span>40C</span> <br/> <span>Stormy</span></div>
-        <div class="col-6"><span>High <span>20 </span></span><span>Low <span>10</span></span><br/><span>Wind <span>15 km/h </span></span><span>Humidity <span>38%</span></span></div>
+        <div class="col-6 today-forecast"><span>🌩️</span> <br/> <span>24C</span> <br/> <span>Thunderstorms</span></div>
+        <div class="col-6"><span>High <span>20 </span></span><span>Low <span>10</span></span><br/><span>Wind <span>15 km/h </span></span> <br/> <span>Humidity <span>38%</span></span></div>
       </div>
     </div>
-      <div class="container">
-        <div class="row">
-          <div class="col hourly-forecast">
-            ⇨
-          </div>
-        </div>
-      </div>
+      
       <div class="scrolling-wrapper">
+        <div>⇨</div> 
         <div class="card"><div class="prediction">Clear Sky</div><h2>05:00</h2>13C</div>
         <div class="card"><div class="prediction">Clear Sky</div><h2>06:00</h2>14C</div>
         <div class="card"><div class="prediction">Cloudy</div><h2>07:00</h2>16C</div>
@@ -75,7 +69,7 @@
       </div>
 
     <div class="container">
-      <div class="row">
+      <div class="row daily-forecast">
         <div class="col-2"> </div>
         <div class="col-2"> </div>
         <div class="col-2"> </div>
@@ -90,7 +84,7 @@
     <div class="container daily-forecast">
       <div class="row">
         <div class="col-2">M </div>
-        <div class="col-2">Sunny</div>
+        <div class="col-2 prediction">Sunny</div>
         <div class="col-2">☀️</div>
         <div class="col-2">28C</div>
         <div class="col-2">31C</div>
@@ -103,7 +97,7 @@
     <div class="container daily-forecast">
       <div class="row">
         <div class="col-2">T </div>
-        <div class="col-2">Overcast</div>
+        <div class="col-2 prediction">Overcast</div>
         <div class="col-2">☁️</div>
         <div class="col-2">24C</div>
         <div class="col-2">27C</div>
@@ -116,7 +110,7 @@
     <div class="container daily-forecast">
       <div class="row">
         <div class="col-2">W </div>
-        <div class="col-2">Rain</div>
+        <div class="col-2  prediction">Rain</div>
         <div class="col-2">🌧️</div>
         <div class="col-2">28C</div>
         <div class="col-2">31C</div>
@@ -129,7 +123,7 @@
     <div class="container daily-forecast">
       <div class="row">
         <div class="col-2">T </div>
-        <div class="col-2">Rain</div>
+        <div class="col-2 prediction">Rain</div>
         <div class="col-2">🌦️</div>
         <div class="col-2">28C</div>
         <div class="col-2">31C</div>
@@ -142,7 +136,7 @@
     <div class="container daily-forecast">
       <div class="row">
         <div class="col-2">F </div>
-        <div class="col-2">Stormy</div>
+        <div class="col-2 prediction">Stormy</div>
         <div class="col-2">🌩️</div>
         <div class="col-2">28C</div>
         <div class="col-2">31C</div>
@@ -155,7 +149,7 @@
     <div class="container daily-forecast">
       <div class="row">
         <div class="col-2">S </div>
-        <div class="col-2">Stormy</div>
+        <div class="col-2 prediction">Stormy</div>
         <div class="col-2">⛈️</div>
         <div class="col-2">28C</div>
         <div class="col-2">31C</div>
@@ -168,7 +162,7 @@
     <div class="container daily-forecast">
       <div class="row">
         <div class="col-2">S </div>
-        <div class="col-2">Rain</div>
+        <div class="col-2 prediction">Rain</div>
         <div class="col-2">🌧️</div>
         <div class="col-2">28C</div>
         <div class="col-2">31C</div>

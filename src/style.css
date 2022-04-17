@@ -11,15 +11,25 @@ body {
 #search-bar {
     background-color: rgba(0, 0, 0, 0.295);
     color: white;
+    font-size: 12px;
+}
+#search-button {
+    font-size: 12px;
 }
 .scrolling-wrapper {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-}
+    margin-top: 40px;
+    margin-bottom: 40px;
+    }
+    .scrolling-wrapper::-webkit-scrollbar {
+        display: none;
+      }
+
     .card {
       display: inline-block;
-      width: 100px;
+      width: 120px;
       color: white;
       background: none;
     }
@@ -41,4 +51,13 @@ body {
       margin-left: 0%;
       width: 100%;
     }
+  }
+  .forecast-title {
+      font-size: 18px;
+      font-weight: bold;
+  }
+
+  .prediction {
+      font-size: 10px;
+      padding: 6px;
   }
