@@ -16,13 +16,14 @@
   
     <nav class="navbar sticky-top navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand text" href="#">Brand Image</a>
-        <span class="navbar-text">
-          Navbar text with an inline element
-        </span>
+        <a class="navbar-brand text" href="#">Weather? We're With You</a>
+        <br>
+        <div class="navbar-text city">
+          Brisbane
+        </div>
           <form class="d-flex">
-            <input id="search-bar" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-light" type="submit">Search</button>
+            <input id="search-bar" class="form-control me-2" type="search" placeholder="City" aria-label="Search" style="width: 120px;">
+            <button id="search-button" class="btn btn-outline-light" type="submit" style="width: 40px;">🔎</button>
           </form>
         </div>
       </div>
@@ -30,12 +31,12 @@
     <div class="container">
       <div class="row">
         <div class="col-6">Today's Forecast</div>
-        <div class="col-6">Wind, Humidity, High & Low</div>
+        <div class="col-6"></div>
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-6 today-forecast"><span>🌩️</span> <br/> <span>40C</span>   </div>
+        <div class="col-6 today-forecast"><span>🌩️</span> <br/> <span>40C</span> <br/> <span>Stormy</span></div>
         <div class="col-6"><span>High <span>20 </span></span><span>Low <span>10</span></span><br/><span>Wind <span>15 km/h </span></span><span>Humidity <span>38%</span></span></div>
       </div>
     </div>

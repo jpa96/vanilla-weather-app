@@ -6,9 +6,11 @@ body {
 }
 .navbar-text {
     color: aliceblue;
+    font-size: 30px;
 }
 #search-bar {
     background-color: rgba(0, 0, 0, 0.295);
+    color: white;
 }
 .today-forecast {
     margin-bottom: 40px;
