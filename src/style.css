@@ -12,7 +12,18 @@ body {
     background-color: rgba(0, 0, 0, 0.295);
     color: white;
 }
-
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+    .card {
+      display: inline-block;
+      width: 100px;
+      color: white;
+      background: none;
+    }
+  
 .daily-forecast {
     animation-duration: 3s;
     animation-name: slidein;
