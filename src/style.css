@@ -1,3 +1,12 @@
-h1 {
-    color: blueviolet;
+body {
+    height: 400vh;
+    background-color: black;
+    font-family: 'Nunito', sans-serif;
+    color: white;   
+}
+.navbar-text {
+    color: aliceblue;
+}
+#search-bar {
+    background-color: rgba(0, 0, 0, 0.295);
 }
