@@ -16,10 +16,14 @@ body {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-}
+    }
+    .scrolling-wrapper::-webkit-scrollbar {
+        display: none;
+      }
+
     .card {
       display: inline-block;
-      width: 100px;
+      width: 120px;
       color: white;
       background: none;
     }
