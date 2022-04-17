@@ -10,3 +10,15 @@ body {
 #search-bar {
     background-color: rgba(0, 0, 0, 0.295);
 }
+.today-forecast {
+    margin-bottom: 40px;
+}
+.hourly-forecast {
+    margin-bottom: 40px;
+}
+.daily-forecast {
+    margin-bottom: 40px;
+}
+.days {
+    padding-top: 50px;
+}
