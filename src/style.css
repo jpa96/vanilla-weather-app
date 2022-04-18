@@ -4,10 +4,20 @@ body {
     font-family: 'Nunito', sans-serif;
     color: white;   
 }
+.text {
+  font-family: 'Baloo 2', cursive;
+  text-shadow: 8px 8px 2px rgb(0, 0, 0);
+}
+.title-icon {
+  position: absolute;
+  z-index: -1;
+  margin-left: 20px;
+  text-shadow: 8px 8px 2px rgb(0, 0, 0);
+}
 .navbar-text {
     color: aliceblue;
     font-size: 30px;
-}
+    }
 #search-bar {
     background-color: rgba(0, 0, 0, 0.295);
     color: white;
@@ -22,8 +32,7 @@ body {
     white-space: nowrap;
     margin-top: 40px;
     margin-bottom: 40px;
-    }
-    .scrolling-wrapper::-webkit-scrollbar {
+    }::-webkit-scrollbar {
         display: none;
       }
 
@@ -32,6 +41,14 @@ body {
       width: 120px;
       color: white;
       background: none;
+    }
+    div h2 {
+      color: rgba(255, 255, 255, 0.646);
+    }:hover{
+      color: white;
+    }
+    .prediction {
+      font-family: 'Baloo 2', cursive;
     }
   
 .daily-forecast {
