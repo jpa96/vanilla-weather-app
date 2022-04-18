@@ -1,5 +1,23 @@
-function showTodaysData(response) {
+function formatDate(timestamp) {
+    //calculate timedate
+    let time = new Date(timestamp)
+    let hours = time.getHours()
+    let minutes = time.getMinutes()
+    if (hours < 10) {
+        `0${hours}`
+    }
+    if (minutes < 10) {
+        `0${minutes}`
+    }
+    return `${hours}:${minutes}`
 
+}
+
+function showTodaysData(response) {
+    
+    dateElement = document.querySelector("#current-time");
+    dateElement.innerHTML = formatDate(response.data.location.localtime);
+    
     let city = response.data.location.name;
     let cityElement = document.querySelector("#current-city");
     cityElement.innerHTML = ` ${city}`;
