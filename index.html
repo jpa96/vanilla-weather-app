@@ -16,16 +16,17 @@
 </head>
 <body>
   
-    <nav class="navbar sticky-top navbar-dark bg-dark">
+    <nav class="navbar sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand text" href="#">Weather?.. We're With You</a> <img src="media/geographical-location-3187523.png" alt="word map png" class="title-icon" style="width: 150px;">
-        <div class="navbar-text time-city">
+        <form class="d-flex">
+            <input id="search-bar" class="form-control me-2" type="search" placeholder="Click To Search City" aria-label="Search" autofocus="on" autocomplete="off" style="width: 140px; height: 30px;">
+            <button id="search-button" class="search-button" type="submit" style="width: 40px; height: 30px;"><img src="media\magnifying-glass.png" alt="search-png" class="search-image" style="width: 20px;"></button>
+          </form>
+        <div class="title-text" >World Weather?.. We're With You</div>
+        <div class="time-city">
           <span class="current-time">08:42</span><small> in</small><span class="city" id="current-city"> Brisbane</span>
         </div>
-          <form class="d-flex">
-            <input id="search-bar" class="form-control me-2" type="search" placeholder="City" aria-label="Search" autofocus="on" autocomplete="off" style="width: 120px; height: 30px;">
-            <button id="search-button" class="btn btn-outline-light" type="submit" style="width: 40px; height: 30px;">🔎</button>
-          </form>
+          
         </div>
       </div>
     </nav>
@@ -37,7 +38,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-6 today-forecast"><span>🌩️</span> <br/> <span id="today-temperature">24C</span> <br/> <span id="today-condition">Thunderstorms</span> </br>Feels Like<span id="feel"></span></div>
+        <div class="col-6 today-forecast"><img src="media\sun\sun.png" alt="sun-png" class="sun" style="width: 150px; "> <br/> <span id="today-temperature">24C</span> <br/> <span id="today-condition">Thunderstorms</span> </br>Feels Like<span id="feel"></span></div>
         <div class="col-6"><span>High <span id="high-temp">20 </span></span> </br><span>Low <span id="low-temp">10</span></span><br/><span>Wind <span id="wind"> </span></span> <br/> <span>Humidity <span id="humidity">38%</span></span></div>
       </div>
     </div>
