@@ -1,23 +1,41 @@
-function formatDate(timestamp) {
-    //calculate timedate
-    let time = new Date(timestamp)
-    let hours = time.getHours()
-    let minutes = time.getMinutes()
+function formatTime(timestamp) {
+    //calculate time
+    let time = new Date(timestamp);
+    let hours = time.getHours();
+    let minutes = time.getMinutes();
     if (hours < 10) {
-        `0${hours}`
+      hours = `0${hours}`
     }
     if (minutes < 10) {
-        `0${minutes}`
+        minutes = `0${minutes}`
     }
     return `${hours}:${minutes}`
-
 }
+
+function formatDate(timestamp) {
+    
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "August", "September", "October", "November", "December"];
+    //calculate date
+    let date = new Date(timestamp);
+    let day = days[date.getDay()];
+    let currentDate = date.getDate();
+    let month = months[date.getMonth()];
+    let year = date.getFullYear();
+
+    let formattedDate = `${day}, ${currentDate} ${month} ${year}`;
+    return formattedDate;
+}
+
 
 function showTodaysData(response) {
     
-    dateElement = document.querySelector("#current-time");
-    dateElement.innerHTML = formatDate(response.data.location.localtime);
+    timeElement = document.querySelector("#current-time");
+    timeElement.innerHTML = formatTime(response.data.location.localtime);
     
+    dateElement = document.querySelector("#date");
+    dateElement.innerHTML = formatDate(response.data.location.localtime_epoch * 1000);
+
     let city = response.data.location.name;
     let cityElement = document.querySelector("#current-city");
     cityElement.innerHTML = ` ${city}`;
