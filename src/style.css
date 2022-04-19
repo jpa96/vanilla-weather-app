@@ -15,6 +15,7 @@ body {
   font-family: 'Baloo 2', cursive;
     color: aliceblue;
     font-size: 25px;
+    text-shadow: 10px 10px 2px #00000063;
     }
 #search-input {
     background: none;
@@ -31,20 +32,20 @@ body {
     background: none;
 }
 .search-image {
-  -webkit-filter: drop-shadow(2px 2px 2px #ffffff85);
+  -webkit-filter: drop-shadow(10px 10px 2px #00000063);
   filter: drop-shadow(10px 10px 2px #00000063);
-  animation: linear;
 }
 .main-weather-icon {
   margin-top: 10px;
   margin-bottom: 5px;
 }
 #main-weather-icon, .weather-icon {
-  -webkit-filter: drop-shadow(10px 10px 5px #222222);
+  -webkit-filter: drop-shadow(15px 15px 4px #222222);
   filter: drop-shadow(15px 15px 4px #22222279);
 }
-#sunrise-icon, #sunset-icon {
-margin-bottom: 10px;
+#sunrise-icon, #sunset-icon, #moonrise, #moonset {
+  display: inline-block;
+  
 }
 
 .scrolling-wrapper {

@@ -55,6 +55,22 @@ function showTodaysData(response) {
     let feelElement = document.querySelector("#feel");
     feelElement.innerHTML = ` ${feel}°C`;
 
+    let sunrise = response.data.forecast.forecastday[0].astro.sunrise;
+    let sunriseElement = document.querySelector("#sunrise");
+    sunriseElement.innerHTML = ` ${sunrise}`;
+
+    let sunset = response.data.forecast.forecastday[0].astro.sunset;
+    let sunsetElement = document.querySelector("#sunset");
+    sunsetElement.innerHTML = ` ${sunset}`;
+
+    let moonrise = response.data.forecast.forecastday[0].astro.moonrise;
+    let moonriseElement = document.querySelector("#moonrise");
+    moonriseElement.innerHTML = ` ${moonrise}`;
+
+    let moonset = response.data.forecast.forecastday[0].astro.moonset;
+    let moonsetElement = document.querySelector("#moonset");
+    moonsetElement.innerHTML = ` ${moonset}`;
+
     let humidity = response.data.current.feelslike_c;
     let humidityElement = document.querySelector("#humidity");
     humidityElement.innerHTML = ` ${humidity}°C`;
