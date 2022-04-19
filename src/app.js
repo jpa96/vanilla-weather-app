@@ -1,5 +1,9 @@
+
+
+//WANT TO CHANGE OWN ICONS TO MATCH WEATHER CONDITION CODES OF API
+
 function formatTime(timestamp) {
-    //calculate time ***WANT THE WEATHER TO BE IN REAL-TIME
+    //calculate time ***WANT TO MAKE THE WEATHER TO BE IN REAL-TIME
     let time = new Date(timestamp);
     let hours = time.getHours();
     let minutes = time.getMinutes();
@@ -165,13 +169,25 @@ function showTodaysData(response) {
     
 }
 
-let city = "perth";
-let apiKey = "b94fed5ef3a74832a4b112126221704";
-let apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=no&alerts=no`;
+function search(city) {
+    let apiKey = "b94fed5ef3a74832a4b112126221704";
+    let apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=no&alerts=no`;
 //https://api.weatherapi.com/v1/forecast.json?key=b94fed5ef3a74832a4b112126221704&q=Perth&days=7&aqi=no&alerts=no
 
-axios.get(apiUrl).then(showTodaysData);
+    axios.get(apiUrl).then(showTodaysData);
+}
 
+function handleSubmit(event) {
+    event.preventDefault();
+    let searchInput = document.querySelector("#search-input");
+    //console.log(searchInput.value);
+    search(searchInput.value);
+}
+    
 
+search("Barcelona")
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
 
 

@@ -5,21 +5,25 @@ body {
     text-shadow: 1px 1px 5px rgb(0, 0, 0);
     color: white;   
 }
-.title-text {
+.title {
   font-family: 'Baloo 2', cursive;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 18px;
+  text-align: center;
 }
 .time-city {
   font-family: 'Baloo 2', cursive;
     color: aliceblue;
-    font-size: 30px;
+    font-size: 25px;
     }
-#search-bar {
+#search-input {
     background: none;
     border: none;
     color: white;
     font-size: 12px;
+}
+#search-input::placeholder {
+  color: rgba(255, 255, 255, 0.635);
 }
 #search-button {
     font-size: 12px;

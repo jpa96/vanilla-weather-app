@@ -16,15 +16,18 @@
 </head>
 <body>
   
+  <div class="title">World Weather?.. We're With You</div>
     <nav class="navbar sticky-top">
       <div class="container-fluid">
-        <form class="d-flex">
-            <input id="search-bar" class="form-control me-2" type="search" placeholder="Click To Search City" aria-label="Search" autofocus="on" autocomplete="off" style="width: 140px; height: 30px;">
+        <form class="d-flex" id="search-form">
+            <input id="search-input" class="form-control me-2" type="search" placeholder="Click To Search City" aria-label="Search" autofocus="on" autocomplete="off" style="width: 140px; height: 30px;">
             <button id="search-button" class="search-button" type="submit" style="width: 40px; height: 30px;"><img src="media\magnifying-glass.png" alt="search-png" class="search-image" style="width: 20px;"></button>
           </form>
-        <div class="title-text" >World Weather?.. We're With You</div>
-        <div class="time-city">
-          <span id="current-time"></span><small> in</small><span class="city" id="current-city"> </span>
+                <div class="time-city">
+          <span id="current-time"></span>
+          <small> in</small>
+          <span class="city" id="current-city"> 
+          </span>
         </div>
           
         </div>
@@ -65,30 +68,78 @@
       
       <div class="scrolling-wrapper">
         <div>⇨</div> 
-        <div class="card"><div class="hourly-prediction">Clear Sky</div><h2>05:00</h2><div id="hour-five"></div></div>
-        <div class="card"><div class="hourly-prediction">Clear Sky</div><h2>06:00</h2><div id="hour-six"></div></div>
-        <div class="card"><div class="hourly-prediction">Cloudy</div><h2>07:00</h2><div id="hour-seven"></div></div>
-        <div class="card"><div class="hourly-prediction">Overcast</div><h2>08:00</h2><div id="hour-eight"></div></div>
-        <div class="card"><div class="hourly-prediction">Overcast</div><h2>09:00</h2><div id="hour-nine"></div></div>
-        <div class="card"><div class="hourly-prediction">Showers</div><h2>10:00</h2><div id="hour-ten"></div></div>
-        <div class="card"><div class="hourly-prediction">Showers</div><h2>11:00</h2><div id="hour-eleven"></div></div>
-        <div class="card"><div class="hourly-prediction">Storm</div><h2>12:00</h2><div id="hour-twelve"></div></div>
-        <div class="card"><div class="hourly-prediction">Storm</div><h2>13:00</h2><div id="hour-thirteen"></div></div>
-      <div class="card"><div class="hourly-prediction">Storm</div><h2>14:00</h2><div id="hour-fourteen"></div></div>
-        <div class="card"><div class="hourly-prediction">Overcast</div><h2>15:00</h2><div id="hour-fifteen"></div></div>
-        <div class="card"><div class="hourly-prediction">Showers</div><h2>16:00</h2><div id="hour-sixteen"></div></div>
-        <div class="card"><div class="hourly-prediction">Showers</div><h2>17:00</h2><div id="hour-seventeen"></div></div>
-        <div class="card"><div class="hourly-prediction">Clear Sky</div><h2>18:00</h2><div id="hour-eighteen"></div></div>
-        <div class="card"><div class="hourly-prediction">Clear Sky</div><h2>19:00</h2><div id="hour-nineteen"></div></div>
-        <div class="card"><div class="hourly-prediction">Cloudy</div><h2>20:00</h2><div id="hour-twenty"></div></div>
-        <div class="card"><div class="hourly-prediction">Cloudy</div><h2>21:00</h2><div id="hour-twentyone"></div></div>
-      <div class="card"><div class="hourly-prediction">Cloudy</div><h2>22:00</h2><div id="hour-twentytwo"></div></div>
-        <div class="card"><div class="hourly-prediction">Clear Sky</div><h2>23:00</h2><div id="hour-twentythree"></div></div>
-        <div class="card"><div class="hourly-prediction">Cloudy</div><h2>00:00</h2><div id="hour-zero"></div></div>
-        <div class="card"><div class="hourly-prediction">Light Shower</div><h2>01:00</h2><div id="hour-one"></div></div>
-        <div class="card"><div class="hourly-prediction">Cloudy</div><h2>02:00</h2><div id="hour-two"></div></div>
-        <div class="card"><div class="hourly-prediction">Clear Sky</div><h2>03:00</h2><div id="hour-three"></div></div>
-        <div class="card"><div class="hourly-prediction">Clear Sky</div><h2>04:00</h2><div id="hour-four"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Clear Sky</div>
+          <h2>05:00</h2><div id="hour-five"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Clear Sky</div>
+          <h2>06:00</h2><div id="hour-six"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Cloudy</div>
+          <h2>07:00</h2><div id="hour-seven"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Overcast</div>
+          <h2>08:00</h2><div id="hour-eight"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Overcast</div>
+          <h2>09:00</h2><div id="hour-nine"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Showers</div>
+          <h2>10:00</h2><div id="hour-ten"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Showers</div>
+          <h2>11:00</h2><div id="hour-eleven"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Storm</div>
+          <h2>12:00</h2><div id="hour-twelve"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Storm</div>
+        <h2>13:00</h2><div id="hour-thirteen"></div></div>
+      <div class="card">
+        <div class="hourly-prediction">Storm</div>
+        <h2>14:00</h2><div id="hour-fourteen"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Overcast</div>
+        <h2>15:00</h2><div id="hour-fifteen"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Showers</div>
+          <h2>16:00</h2><div id="hour-sixteen"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Showers</div>
+          <h2>17:00</h2><div id="hour-seventeen"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Clear Sky</div>
+          <h2>18:00</h2><div id="hour-eighteen"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Clear Sky</div>
+          <h2>19:00</h2><div id="hour-nineteen"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Cloudy</div>
+          <h2>20:00</h2><div id="hour-twenty"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Cloudy</div>
+          <h2>21:00</h2><div id="hour-twentyone"></div></div>
+      <div class="card">
+        <div class="hourly-prediction">Cloudy</div>
+        <h2>22:00</h2><div id="hour-twentytwo"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Clear Sky</div>
+          <h2>23:00</h2><div id="hour-twentythree"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Cloudy</div>
+          <h2>00:00</h2><div id="hour-zero"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Light Shower</div>
+          <h2>01:00</h2><div id="hour-one"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Cloudy</div>
+          <h2>02:00</h2><div id="hour-two"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Clear Sky</div>
+          <h2>03:00</h2><div id="hour-three"></div></div>
+        <div class="card">
+          <div class="hourly-prediction">Clear Sky</div>
+          <h2>04:00</h2><div id="hour-four"></div></div>
       </div>
 
     <div class="container">
@@ -96,7 +147,8 @@
         <div class="col-2 daily-forecast-col"> </div>
         <div class="col-2 daily-forecast-col"> </div>
         <div class="col-2 daily-forecast-col"> </div>
-        <div class="col-2 daily-forecast-col"><img src="media\temp-gage.png" alt="temperature-gage" class="temperature-gage" style="width: 30px;"></div>
+        <div class="col-2 daily-forecast-col">
+          <img src="media\temp-gage.png" alt="temperature-gage" class="temperature-gage" style="width: 30px;"></div>
         <div class="col-2 daily-forecast-col h">H</div>
         <div class="col-2 daily-forecast-col l">L</div>
         
@@ -108,7 +160,8 @@
       <div class="row daily-forecast" style="display: flex;">
         <div class="col-2 daily-forecast-col weekday">M </div>
         <div class="col-2 daily-forecast-col prediction">Sunny</div>
-        <div class="col-2 daily-forecast-col"><img src="media\sun\sun.png" alt="sun-png" class="weather-icon" id="sunny" style="width: 50px; "></div>
+        <div class="col-2 daily-forecast-col">
+          <img src="media\sun\sun.png" alt="sun-png" class="weather-icon" id="sunny" style="width: 50px; "></div>
         <div class="col-2 daily-forecast-col">28C</div>
         <div class="col-2 daily-forecast-col">31C</div>
         <div class="col-2 daily-forecast-col">12c</div>
@@ -121,7 +174,8 @@
       <div class="row daily-forecast" style="display: flex;">
         <div class="col-2 daily-forecast-col weekday">T </div>
         <div class="col-2 daily-forecast-col prediction">Overcast</div>
-        <div class="col-2 daily-forecast-col"><img src="media\sun\sun_cloud_wind.png" alt="sun-cloud-wind-png" class="weather-icon" id="overcast" style="width: 50px; "></div>
+        <div class="col-2 daily-forecast-col">
+          <img src="media\sun\sun_cloud_wind.png" alt="sun-cloud-wind-png" class="weather-icon" id="overcast" style="width: 50px; "></div>
         <div class="col-2 daily-forecast-col">24C</div>
         <div class="col-2 daily-forecast-col">27C</div>
         <div class="col-2 daily-forecast-col">11c</div>
@@ -134,7 +188,8 @@
       <div class="row daily-forecast" style="display: flex;">
         <div class="col-2 daily-forecast-col weekday">W </div>
         <div class="col-2 daily-forecast-col prediction">Rain</div>
-        <div class="col-2 daily-forecast-col"><img src="media\rain\rain.png" alt="rain-png" class="weather-icon" id="rain" style="width: 50px; "></div>
+        <div class="col-2 daily-forecast-col">
+          <img src="media\rain\rain.png" alt="rain-png" class="weather-icon" id="rain" style="width: 50px; "></div>
         <div class="col-2 daily-forecast-col">28C</div>
         <div class="col-2 daily-forecast-col">31C</div>
         <div class="col-2 daily-forecast-col">12c</div>
@@ -147,7 +202,8 @@
       <div class="row daily-forecast" style="display: flex;">
         <div class="col-2 daily-forecast-col weekday">T </div>
         <div class="col-2 daily-forecast-col prediction">Rain</div>
-        <div class="col-2 daily-forecast-col"><img src="media\cloud\cloud_lighting_rain.png" alt="cloud-lightning-rain-png" class="weather-icon" id="lighting-storm" style="width: 50px; "></div>
+        <div class="col-2 daily-forecast-col">
+          <img src="media\cloud\cloud_lighting_rain.png" alt="cloud-lightning-rain-png" class="weather-icon" id="lighting-storm" style="width: 50px; "></div>
         <div class="col-2 daily-forecast-col">28C</div>
         <div class="col-2 daily-forecast-col">31C</div>
         <div class="col-2 daily-forecast-col">12c</div>
@@ -160,7 +216,8 @@
       <div class="row daily-forecast" style="display: flex;">
         <div class="col-2 daily-forecast-col weekday">F </div>
         <div class="col-2 daily-forecast-col prediction">Stormy</div>
-        <div class="col-2 daily-forecast-col"><img src="media\cloud\cloud_wind_rain.png" alt="cloud-wind-rain-png" class="weather-icon" id="wind-storm" style="width: 50px; "></div>
+        <div class="col-2 daily-forecast-col">
+          <img src="media\cloud\cloud_wind_rain.png" alt="cloud-wind-rain-png" class="weather-icon" id="wind-storm" style="width: 50px; "></div>
         <div class="col-2 daily-forecast-col">28C</div>
         <div class="col-2 daily-forecast-col">31C</div>
         <div class="col-2 daily-forecast-col">12c</div>
@@ -173,7 +230,8 @@
       <div class="row daily-forecast" style="display: flex;">
         <div class="col-2 daily-forecast-col weekday">S </div>
         <div class="col-2 daily-forecast-col prediction">Stormy</div>
-        <div class="col-2 daily-forecast-col"><img src="media\sun\sun_cloud_rain.png" alt="cloud-sun-rain-png" class="weather-icon" id="sunshower" style="width: 50px; "></div>
+        <div class="col-2 daily-forecast-col">
+          <img src="media\sun\sun_cloud_rain.png" alt="cloud-sun-rain-png" class="weather-icon" id="sunshower" style="width: 50px; "></div>
         <div class="col-2 daily-forecast-col">28C</div>
         <div class="col-2 daily-forecast-col">31C</div>
         <div class="col-2 daily-forecast-col">12c</div>
@@ -186,7 +244,8 @@
       <div class="row daily-forecast" style="display: flex;">
         <div class="col-2 daily-forecast-col weekday">S </div>
         <div class="col-2 daily-forecast-col prediction">Rain</div>
-        <div class="col-2 daily-forecast-col"><img src="media\sun\sun_wind.png" alt="sun-wind-png" class="weather-icon" id="sun-wind" style="width: 50px; "></div>
+        <div class="col-2 daily-forecast-col">
+          <img src="media\sun\sun_wind.png" alt="sun-wind-png" class="weather-icon" id="sun-wind" style="width: 50px; "></div>
         <div class="col-2 daily-forecast-col">28C</div>
         <div class="col-2 daily-forecast-col">31C</div>
         <div class="col-2 daily-forecast-col">12c</div>
@@ -195,7 +254,9 @@
 
     </div>
     
-    <div>Coded by Jessica Anstey<br/>Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></div>
+    <div>Coded by Jessica Anstey<br/>Powered by 
+      <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+    </div>
 
     <script src="src/app.js"></script>
 </body>
