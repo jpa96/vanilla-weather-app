@@ -38,13 +38,15 @@ body {
   filter: drop-shadow(2px 2px 2px #ffffff85);
   animation: linear;
 }
-.sun {
-  -webkit-filter: drop-shadow(5px 5px 5px #222222);
-  filter: drop-shadow(5px 5px 2px #222222);
-  animation: linear;
+.main-weather-icon {
   margin-top: 10px;
   margin-bottom: 5px;
 }
+#main-weather-icon, .weather-icon {
+  -webkit-filter: drop-shadow(5px 5px 5px #222222);
+  filter: drop-shadow(5px 5px 5px #222222);
+}
+
 .scrolling-wrapper {
     overflow-x: scroll;
     overflow-y: hidden;
@@ -60,6 +62,7 @@ body {
       width: 120px;
       color: white;
       background: none;
+      border: none;
     }
     div h2 {
       color: rgba(255, 255, 255, 0.726);
@@ -69,14 +72,14 @@ body {
     .prediction {
       font-family: 'Baloo 2', cursive;
     }
-  
+ 
 .daily-forecast {
+    margin-bottom: 15px;
     animation-duration: 3s;
-    animation-name: slidein, fadein;
-    margin-bottom: 40px;
+    animation-name: slidein;
     overflow: hidden;
-  }
     
+  }
   @keyframes slidein {
     from {
       margin-left: -100%;
@@ -88,6 +91,10 @@ body {
       width: 100%;
     }
   }
+  .daily-forecast-col {
+    margin-bottom: 20px;
+  } 
+  
   .forecast-title {
       font-size: 18px;
       font-weight: bold;
