@@ -1,3 +1,7 @@
+
+
+
+
 function formatTime(timestamp) {
     //calculate time
     let time = new Date(timestamp);
@@ -26,7 +30,6 @@ function formatDate(timestamp) {
     let formattedDate = `${day}, ${currentDate} ${month} ${year}`;
     return formattedDate;
 }
-
 
 function showTodaysData(response) {
     
