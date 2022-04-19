@@ -1,5 +1,5 @@
 function formatTime(timestamp) {
-    //calculate time
+    //calculate time ***WANT THE WEATHER TO BE IN REAL-TIME
     let time = new Date(timestamp);
     let hours = time.getHours();
     let minutes = time.getMinutes();
@@ -50,6 +50,10 @@ function showTodaysData(response) {
     let feel = response.data.current.feelslike_c;
     let feelElement = document.querySelector("#feel");
     feelElement.innerHTML = ` ${feel}°C`;
+
+    let humidity = response.data.current.feelslike_c;
+    let humidityElement = document.querySelector("#humidity");
+    humidityElement.innerHTML = ` ${humidity}°C`;
 
     let highTemp = response.data.forecast.forecastday[0].day.maxtemp_c;
     let highTempElement = document.querySelector("#high-temp");

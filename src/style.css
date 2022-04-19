@@ -8,19 +8,12 @@ body {
 .title-text {
   font-family: 'Baloo 2', cursive;
   color: #ffffff;
-  font-size: 30px;
-}
-.title-icon {
-  position: absolute;
-  z-index: -1;
-  margin-left: 550px;
-  -webkit-filter: drop-shadow(5px 5px 5px #222222);
-  filter: drop-shadow(5px 5px 2px #222222); 
+  font-size: 20px;
 }
 .time-city {
   font-family: 'Baloo 2', cursive;
     color: aliceblue;
-    font-size: 40px;
+    font-size: 30px;
     }
 #search-bar {
     background: none;
@@ -35,7 +28,7 @@ body {
 }
 .search-image {
   -webkit-filter: drop-shadow(2px 2px 2px #ffffff85);
-  filter: drop-shadow(2px 2px 2px #ffffff85);
+  filter: drop-shadow(10px 10px 2px #00000063);
   animation: linear;
 }
 .main-weather-icon {
@@ -43,8 +36,8 @@ body {
   margin-bottom: 5px;
 }
 #main-weather-icon, .weather-icon {
-  -webkit-filter: drop-shadow(5px 5px 5px #222222);
-  filter: drop-shadow(5px 5px 5px #222222);
+  -webkit-filter: drop-shadow(10px 10px 5px #222222);
+  filter: drop-shadow(15px 15px 4px #22222279);
 }
 #sunrise-icon, #sunset-icon {
 margin-bottom: 10px;
