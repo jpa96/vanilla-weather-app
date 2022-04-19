@@ -1,7 +1,3 @@
-
-
-
-
 function formatTime(timestamp) {
     //calculate time
     let time = new Date(timestamp);

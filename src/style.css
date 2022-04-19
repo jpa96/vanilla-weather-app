@@ -46,6 +46,9 @@ body {
   -webkit-filter: drop-shadow(5px 5px 5px #222222);
   filter: drop-shadow(5px 5px 5px #222222);
 }
+#sunrise-icon, #sunset-icon {
+margin-bottom: 10px;
+}
 
 .scrolling-wrapper {
     overflow-x: scroll;
@@ -69,8 +72,16 @@ body {
     }:hover{
       color: white;
     }
-    .prediction {
+    .hourly-prediction {
       font-family: 'Baloo 2', cursive;
+      font-size: 10px;
+      padding: 1px;
+    }
+    .h, .l, .weekday, .prediction {
+      font-family: 'Baloo 2', cursive;
+    }
+    .h, .l, .weekday {
+      font-size: 20px;
     }
  
 .daily-forecast {
@@ -95,12 +106,9 @@ body {
     margin-bottom: 20px;
   } 
   
+  
   .forecast-title {
       font-size: 18px;
       font-weight: bold;
   }
 
-  .prediction {
-      font-size: 10px;
-      padding: 6px;
-  }
