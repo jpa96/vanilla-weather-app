@@ -1,3 +1,24 @@
+function convertUnitF() {
+
+let mainTemperature = document.querySelector("#today-temperature");
+fahrenheitTemperature = Math.round(12 * 9 / 5) + 32;
+mainTemperature.innerHTML = `${fahrenheitTemperature}°F`;
+}
+
+let toggleFahrenheit = document.querySelector("#switch");
+toggleFahrenheit.addEventListener("click", convertUnitF);
+let toggleCelcius = document.querySelector("#switch");
+toggleCelcius.addEventListener("click", convertUnitC);
+
+function convertUnitC(response) {
+    let temperature = response.data.current.temp_c;
+    let temperatureElement = document.querySelector("#today-temperature");
+    temperatureElement.innerHTML = `${temperature}°C`; 
+    
+    }
+    
+    
+    
 
 
 //WANT TO CHANGE OWN ICONS TO MATCH WEATHER CONDITION CODES OF API
