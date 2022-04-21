@@ -1,24 +1,4 @@
-function convertUnitF() {
 
-let mainTemperature = document.querySelector("#today-temperature");
-fahrenheitTemperature = Math.round(12 * 9 / 5) + 32;
-mainTemperature.innerHTML = `${fahrenheitTemperature}°F`;
-}
-
-let toggleFahrenheit = document.querySelector("#switch");
-toggleFahrenheit.addEventListener("click", convertUnitF);
-let toggleCelcius = document.querySelector("#switch");
-toggleCelcius.addEventListener("click", convertUnitC);
-
-function convertUnitC(response) {
-    let temperature = response.data.current.temp_c;
-    let temperatureElement = document.querySelector("#today-temperature");
-    temperatureElement.innerHTML = `${temperature}°C`; 
-    
-    }
-    
-    
-    
 
 
 //WANT TO CHANGE OWN ICONS TO MATCH WEATHER CONDITION CODES OF API
@@ -64,7 +44,9 @@ function showTodaysData(response) {
     let cityElement = document.querySelector("#current-city");
     cityElement.innerHTML = ` ${city}`;
 
-    let temperature = response.data.current.temp_c;
+    celciusTemperature = response.data.current.temp_c;
+
+    let temperature = (celciusTemperature);
     let temperatureElement = document.querySelector("#today-temperature");
     temperatureElement.innerHTML = `${temperature}°C`; 
 
@@ -222,9 +204,31 @@ function handleSubmit(event) {
 }
     
 
-search("Barcelona")
+
+
+function convertUnitF() {
+    
+    let mainTemperature = document.querySelector("#today-temperature");
+    fahrenheitTemperature = Math.round(celciusTemperature * 9 / 5) + 32;
+    mainTemperature.innerHTML = `${fahrenheitTemperature}°F`;
+    }
+    
+function convertUnitC(){
+
+    let mainTemperature = document.querySelector("#today-temperature");
+    mainTemperature.innerHTML = celciusTemperature;
+
+}
+
+
+let toggleFahrenheit = document.querySelector("#switch");
+toggleFahrenheit.addEventListener("click", convertUnitF);
+
+let celciusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 
+
+search("Barcelona")
