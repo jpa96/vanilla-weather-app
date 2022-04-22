@@ -13,7 +13,7 @@ body {
 }
 .time-city {
   font-family: 'Baloo 2', cursive;
-    color: aliceblue;
+    color: rgba(240, 248, 255, 0.717);
     font-size: 25px;
     text-shadow: 10px 10px 2px #00000063;
     }
@@ -27,9 +27,23 @@ body {
     .label-text-right {
       margin-left: 4px;
     }
+    #fahrenheit-label, #celcius-label {
+      animation: glow 2s infinite alternate;
+      color: #fff;
+    }
+    
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #ffffff, 0 0 8px #ffffff, 0 0 10px #ffffff, 0 0 12px #e60073, 0 0 14px #e60073;
+      }
+      to {
+        text-shadow: 0 0 3px #fff, 0 0 5px #ff4da6, 0 0 9x #ffffff, 0 0 11px #ffffff, 0 0 13px #ffffff, 0 0 5px #ff4da6, 0 0 7px #ff4da6;
+      }
+    }
     .label-text-left {
       margin-right: 10px;
     }
+    
     .toggle {
       isolation: isolate;
       position: relative;

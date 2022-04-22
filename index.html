@@ -24,12 +24,12 @@
             <button id="search-button" class="search-button" type="submit" style="width: 40px; height: 30px;"><img src="media\magnifying-glass.png" alt="search-png" class="search-image" style="width: 20px;"></button>
           </form>
           <label class="label">
-            <div class="label-text-left">°C</div>
+            <div class="label-text-left" id="celcius-label" title="Click for Metric">°C</div>
             <div class="toggle" id="toggle">
               <input class="toggle-state" id="switch" type="checkbox" name="check" value="check" />
               <div class="indicator" id="indicator"></div>
             </div>
-            <div class="label-text-right">°F</div>
+            <div class="label-text-right" id="fahrenheit-label" title="Click for Imperial">°F</div>
           </label>
                 <div class="time-city">
           <span id="current-time"></span>
@@ -51,7 +51,7 @@
     <div class="container">
       <div class="row" style="display: flex;">
         <div class="col today-forecast">
-          <img src="media\sun\sun.png" alt="sun-png" class="main-weather-icon" id="main-weather-icon" style="width: 150px; "> 
+          <img src="media\sun\sun_cloud.png" alt="sun-png" class="main-weather-icon" id="main-weather-icon" style="width: 150px; "> 
           <br/> Average
           <span id="today-temperature"> </span> 
           <br/> 
@@ -276,7 +276,7 @@
     </div>
     
     <div>Coded by Jessica Anstey<br/>Powered by 
-      <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
+      <a href="https://www.weatherapi.com/" target="_blank" title="Free Weather API">WeatherAPI.com</a>
     </div>
 
     <script src="src/app.js"></script>
