@@ -13,7 +13,7 @@ function formatTime(timestamp) {
     if (minutes < 10) {
         minutes = `0${minutes}`
     }
-    return `${hours}:${minutes}`
+    return `${hours}:${minutes}`;
 }
 
 function formatDate(timestamp) {
@@ -73,24 +73,23 @@ function showTodaysData(response) {
     let moonsetElement = document.querySelector("#moonset");
     moonsetElement.innerHTML = ` ${moonset}`;
 
-    let humidity = response.data.current.feelslike_c;
+    let humidity = response.data.current.humidity;
     let humidityElement = document.querySelector("#humidity");
-    humidityElement.innerHTML = ` ${humidity}°C`;
+    humidityElement.innerHTML = ` ${humidity}%`;
 
     let highTemp = response.data.forecast.forecastday[0].day.maxtemp_c;
     let highTempElement = document.querySelector("#high-temp");
-    highTempElement.innerHTML = `${highTemp}°C`
+    highTempElement.innerHTML = `${highTemp}°C`;
 
     let lowTemp = response.data.forecast.forecastday[0].day.mintemp_c;
     let lowTempElement = document.querySelector("#low-temp");
-    lowTempElement.innerHTML = `${lowTemp}°C`
+    lowTempElement.innerHTML = `${lowTemp}°C`;
 
     let wind = Math.round(response.data.current.wind_kph);
     let windElement = document.querySelector("#wind");
     windElement.innerHTML = ` ${wind} km/h`;
     
 	let mainIcon = document.querySelector("#main-weather-icon");
-
 	mainIcon.setAttribute("src", `icons/${response.data.current.condition.code}.png`);
 	
 	
@@ -194,9 +193,9 @@ function showTodaysData(response) {
 }
 
 function search(city) {
-    let apiKey = "b94fed5ef3a74832a4b112126221704";
+    let apiKey = "900cc2ae081d424d98e125751222304";
     let apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=no&alerts=no`;
-//https://api.weatherapi.com/v1/forecast.json?key=b94fed5ef3a74832a4b112126221704&q=Perth&days=7&aqi=no&alerts=no
+//https://api.weatherapi.com/v1/forecast.json?key=900cc2ae081d424d98e125751222304&q=Perth&days=7&aqi=no&alerts=no
 
     axios.get(apiUrl).then(showTodaysData);
 }
