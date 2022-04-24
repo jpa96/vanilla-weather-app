@@ -31,8 +31,36 @@ function formatDate(timestamp) {
     return formattedDate;
 }
 
+function displayForecast() {
+    let forecastElement = document.querySelector("#daily-forecast");
+    
+
+    let forecastHTML = "";
+    let days = ["S", "M", "T", "W", "T", "F", "S"];
+    days.forEach(function(day) {
+        forecastHTML = 
+        forecastHTML + 
+        `
+    <div class="row daily-forecast" style="display: flex;">
+    <div class="col-2 daily-forecast-col weekday" id="weekday">${day}</div>
+    <div class="col-2 daily-forecast-col prediction" id="daily-prediction">Sunny</div>
+    <div class="col-2 daily-forecast-col" id="weather-icon-col">
+      <img src="icons/1252.png" alt="sun-png" class="weather-icon" id="sunny" style="width: 50px; "></div>
+    <div class="col-2 daily-forecast-col" id="daily-average">28C</div>
+    <div class="col-2 daily-forecast-col" id="daily-high">31C</div>
+    <div class="col-2 daily-forecast-col" id="daily-low">12c</div>
+    </div>
+    `;
+    })
+    
+    
+    forecastElement.innerHTML = forecastHTML;
+
+}
+
 function showTodaysData(response) {
-    	
+
+        	
     timeElement = document.querySelector("#current-time");
     timeElement.innerHTML = formatTime(response.data.location.localtime);
     
@@ -234,4 +262,6 @@ toggleCelcius.addEventListener("click", convertUnitC);
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("Barcelona")
+search("Barcelona");
+
+displayForecast();
