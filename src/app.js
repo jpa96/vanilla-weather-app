@@ -31,18 +31,21 @@ function formatDate(timestamp) {
     return formattedDate;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+
+    let forecast = response.data.forecast;
+
     let forecastElement = document.querySelector("#daily-forecast");
     
 
     let forecastHTML = "";
-    let days = ["S", "M", "T", "W", "T", "F", "S"];
-    days.forEach(function(day) {
+    
+    forecast.forEach(function(forecastDay) {
         forecastHTML = 
         forecastHTML + 
         `
     <div class="row daily-forecast" style="display: flex;">
-    <div class="col-2 daily-forecast-col weekday" id="weekday">${day}</div>
+    <div class="col-2 daily-forecast-col weekday" id="weekday">${forecastDay[0].date_epoch}</div>
     <div class="col-2 daily-forecast-col prediction" id="daily-prediction">Sunny</div>
     <div class="col-2 daily-forecast-col" id="weather-icon-col">
       <img src="icons/1252.png" alt="sun-png" class="weather-icon" id="sunny" style="width: 50px; "></div>
@@ -218,6 +221,8 @@ function showTodaysData(response) {
     let hour4Element = document.querySelector("#hour-four");
     hour4Element.innerHTML = `${hour4Temp}°C`;
     
+    getForecast(response.data.forecast);
+
 }
 
 function search(city) {
@@ -226,6 +231,14 @@ function search(city) {
 //https://api.weatherapi.com/v1/forecast.json?key=900cc2ae081d424d98e125751222304&q=Perth&days=7&aqi=no&alerts=no
 
     axios.get(apiUrl).then(showTodaysData);
+}
+
+function getForecast(city) {
+    let apiKey = "900cc2ae081d424d98e125751222304";
+    let apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=no&alerts=no`;
+//https://api.weatherapi.com/v1/forecast.json?key=900cc2ae081d424d98e125751222304&q=Perth&days=7&aqi=no&alerts=no
+
+    axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {
@@ -264,4 +277,3 @@ form.addEventListener("submit", handleSubmit);
 
 search("Barcelona");
 
-displayForecast();
