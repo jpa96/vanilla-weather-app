@@ -31,8 +31,26 @@ function formatDate(timestamp) {
     return formattedDate;
 }
 
+function forecastDay(timestamp) {
+    
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let date = new Date(timestamp);
+    let day = days[date.getDay()];
+    let formattedDate = `${day}`;
+    return formattedDate;
+}
+
 function showTodaysData(response) {
-    	
+
+    let dayOne = document.querySelector("#day-1");
+    dayOne.innerHTML = forecastDay(response.data.forecast.forecastday[0].date);
+    
+    let dayTwo = document.querySelector("#day-2");
+    dayTwo.innerHTML = forecastDay(response.data.forecast.forecastday[1].date);
+    
+    let dayThree = document.querySelector("#day-3");
+    dayThree.innerHTML = forecastDay(response.data.forecast.forecastday[2].date);
+
     timeElement = document.querySelector("#current-time");
     timeElement.innerHTML = formatTime(response.data.location.localtime);
     

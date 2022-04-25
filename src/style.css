@@ -140,8 +140,12 @@ body {
     .h, .l, .weekday, .prediction {
       font-family: 'Baloo 2', cursive;
     }
-    .h, .l, .weekday {
-      font-size: 20px;
+    .h, .l, .prediction {
+      font-size: 14px;
+    }
+
+    .weekday {
+      font-size: 10px;
     }
  
 .daily-forecast {
