@@ -31,39 +31,8 @@ function formatDate(timestamp) {
     return formattedDate;
 }
 
-function displayForecast(response) {
-
-    let forecast = response.data.forecast;
-
-    let forecastElement = document.querySelector("#daily-forecast");
-    
-
-    let forecastHTML = "";
-    
-    forecast.forEach(function(forecastDay) {
-        forecastHTML = 
-        forecastHTML + 
-        `
-    <div class="row daily-forecast" style="display: flex;">
-    <div class="col-2 daily-forecast-col weekday" id="weekday">${forecastDay[0].date_epoch}</div>
-    <div class="col-2 daily-forecast-col prediction" id="daily-prediction">Sunny</div>
-    <div class="col-2 daily-forecast-col" id="weather-icon-col">
-      <img src="icons/1252.png" alt="sun-png" class="weather-icon" id="sunny" style="width: 50px; "></div>
-    <div class="col-2 daily-forecast-col" id="daily-average">28C</div>
-    <div class="col-2 daily-forecast-col" id="daily-high">31C</div>
-    <div class="col-2 daily-forecast-col" id="daily-low">12c</div>
-    </div>
-    `;
-    })
-    
-    
-    forecastElement.innerHTML = forecastHTML;
-
-}
-
 function showTodaysData(response) {
-
-        	
+    	
     timeElement = document.querySelector("#current-time");
     timeElement.innerHTML = formatTime(response.data.location.localtime);
     
@@ -220,9 +189,6 @@ function showTodaysData(response) {
     let hour4Temp = response.data.forecast.forecastday[0].hour[4].temp_c;
     let hour4Element = document.querySelector("#hour-four");
     hour4Element.innerHTML = `${hour4Temp}°C`;
-    
-    getForecast(response.data.forecast);
-
 }
 
 function search(city) {
@@ -232,15 +198,6 @@ function search(city) {
 
     axios.get(apiUrl).then(showTodaysData);
 }
-
-function getForecast(city) {
-    let apiKey = "900cc2ae081d424d98e125751222304";
-    let apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=no&alerts=no`;
-//https://api.weatherapi.com/v1/forecast.json?key=900cc2ae081d424d98e125751222304&q=Perth&days=7&aqi=no&alerts=no
-
-    axios.get(apiUrl).then(displayForecast);
-}
-
 function handleSubmit(event) {
     event.preventDefault();
     let searchInput = document.querySelector("#search-input");
@@ -275,5 +232,4 @@ toggleCelcius.addEventListener("click", convertUnitC);
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("Barcelona");
-
+search("Rio De Janeiro");
