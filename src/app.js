@@ -41,7 +41,7 @@ function forecastDay(timestamp) {
 }
 
 function showTodaysData(response) {
-
+    //DAILY FORECAST FOR 3 DAYS
     let dayOne = document.querySelector("#day-1");
     dayOne.innerHTML = forecastDay(response.data.forecast.forecastday[0].date);
     
@@ -50,6 +50,15 @@ function showTodaysData(response) {
     
     let dayThree = document.querySelector("#day-3");
     dayThree.innerHTML = forecastDay(response.data.forecast.forecastday[2].date);
+
+    let dayOneCondition = document.querySelector("#day-1-prediction");
+    dayOneCondition.innerHTML = response.data.forecast.forecastday[0].day.condition.text;
+
+    let dayTwoCondition = document.querySelector("#day-2-prediction");
+    dayTwoCondition.innerHTML = response.data.forecast.forecastday[1].day.condition.text;
+    
+    let dayThreeCondition = document.querySelector("#day-3-prediction");
+    dayThreeCondition.innerHTML = response.data.forecast.forecastday[2].day.condition.text;
 
     timeElement = document.querySelector("#current-time");
     timeElement.innerHTML = formatTime(response.data.location.localtime);

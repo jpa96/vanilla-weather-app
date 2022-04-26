@@ -1,6 +1,6 @@
 body {
     height: 400vh;
-    background-color: rgba(9, 102, 250, 0.792);
+    background-color: rgba(87, 137, 145, 0.477);
     font-family: 'Nunito', sans-serif;
     text-shadow: 1px 1px 5px rgb(0, 0, 0);
     color: white;   
@@ -137,15 +137,20 @@ body {
       font-size: 10px;
       padding: 1px;
     }
-    .h, .l, .weekday, .prediction {
+    .h, .l, .weekday {
       font-family: 'Baloo 2', cursive;
     }
-    .h, .l, .prediction {
+    .h, .l {
       font-size: 14px;
     }
 
     .weekday {
-      font-size: 10px;
+      font-size: 12px;
+      text-align: left;
+    }
+    .prediction {
+      font-size: 12px;
+      text-align: center;
     }
  
 .daily-forecast {
