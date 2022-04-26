@@ -59,7 +59,17 @@ function showTodaysData(response) {
     
     let dayThreeCondition = document.querySelector("#day-3-prediction");
     dayThreeCondition.innerHTML = response.data.forecast.forecastday[2].day.condition.text;
+    
+    let dayOneIcon = document.querySelector("#day-one-icon");
+	dayOneIcon.setAttribute("src", `icons/${response.data.forecast.forecastday[0].day.condition.code}.png`);
 
+    let dayTwoIcon = document.querySelector("#day-two-icon");
+	dayTwoIcon.setAttribute("src", `icons/${response.data.forecast.forecastday[1].day.condition.code}.png`);
+
+    let dayThreeIcon = document.querySelector("#day-three-icon");
+	dayThreeIcon.setAttribute("src", `icons/${response.data.forecast.forecastday[2].day.condition.code}.png`);
+
+    //MAIN WEATHER INFORMATION
     timeElement = document.querySelector("#current-time");
     timeElement.innerHTML = formatTime(response.data.location.localtime);
     
