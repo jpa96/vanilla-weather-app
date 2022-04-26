@@ -69,6 +69,42 @@ function showTodaysData(response) {
     let dayThreeIcon = document.querySelector("#day-three-icon");
 	dayThreeIcon.setAttribute("src", `icons/${response.data.forecast.forecastday[2].day.condition.code}.png`);
 
+    let dayOneTemp = document.querySelector("#temp-one");
+    let dayOneTempData = Math.round(response.data.forecast.forecastday[0].day.avgtemp_c);
+    dayOneTemp.innerHTML = `${dayOneTempData}°C`;
+
+    let dayTwoTemp = document.querySelector("#temp-two");
+    let dayTwoTempData = Math.round(response.data.forecast.forecastday[1].day.avgtemp_c);
+    dayTwoTemp.innerHTML = `${dayTwoTempData}°C`;
+
+    let dayThreeTemp = document.querySelector("#temp-three");
+    let dayThreeTempData = Math.round(response.data.forecast.forecastday[2].day.avgtemp_c);
+    dayThreeTemp.innerHTML = `${dayThreeTempData}°C`;
+
+    let dayOneHigh = document.querySelector("#high-temp-one");
+    let dayOneHighData = Math.round(response.data.forecast.forecastday[0].day.maxtemp_c);
+    dayOneHigh.innerHTML = `${dayOneHighData}°C`;
+
+    let dayTwoHigh = document.querySelector("#high-temp-two");
+    let dayTwoHighData = Math.round(response.data.forecast.forecastday[1].day.maxtemp_c);
+    dayTwoHigh.innerHTML = `${dayTwoHighData}°C`;
+
+    let dayThreeHigh = document.querySelector("#high-temp-three");
+    let dayThreeHighData = Math.round(response.data.forecast.forecastday[2].day.maxtemp_c);
+    dayThreeHigh.innerHTML = `${dayThreeHighData}°C`;
+
+    let dayOneLow = document.querySelector("#low-temp-one");
+    let dayOneLowData = Math.round(response.data.forecast.forecastday[0].day.mintemp_c);
+    dayOneLow.innerHTML = `${dayOneLowData}°C`;
+
+    let dayTwoLow = document.querySelector("#low-temp-two");
+    let dayTwoLowData = Math.round(response.data.forecast.forecastday[1].day.mintemp_c);
+    dayTwoLow.innerHTML = `${dayTwoLowData}°C`;
+
+    let dayThreeLow = document.querySelector("#low-temp-three");
+    let dayThreeLowData = Math.round(response.data.forecast.forecastday[2].day.mintemp_c);
+    dayThreeLow.innerHTML = `${dayThreeLowData}°C`;
+
     //MAIN WEATHER INFORMATION
     timeElement = document.querySelector("#current-time");
     timeElement.innerHTML = formatTime(response.data.location.localtime);
@@ -80,7 +116,7 @@ function showTodaysData(response) {
     let cityElement = document.querySelector("#current-city");
     cityElement.innerHTML = ` ${city}`;
 
-    celciusTemperature = response.data.current.temp_c;
+    celciusTemperature = Math.round(response.data.current.temp_c);
 
     let temperature = (celciusTemperature);
     let temperatureElement = document.querySelector("#today-temperature");
@@ -90,35 +126,35 @@ function showTodaysData(response) {
     let conditionElement = document.querySelector("#today-condition");
     conditionElement.innerHTML = condition;
 
-	let feel = response.data.current.feelslike_c;
+	let feel = Math.round(response.data.current.feelslike_c);
     let feelElement = document.querySelector("#feel");
     feelElement.innerHTML = ` ${feel}°C`;
 
     let sunrise = response.data.forecast.forecastday[0].astro.sunrise;
     let sunriseElement = document.querySelector("#sunrise");
-    sunriseElement.innerHTML = ` ${sunrise}`;
+    sunriseElement.innerHTML = `${sunrise}`;
 
     let sunset = response.data.forecast.forecastday[0].astro.sunset;
     let sunsetElement = document.querySelector("#sunset");
-    sunsetElement.innerHTML = ` ${sunset}`;
+    sunsetElement.innerHTML = `${sunset}`;
 
     let moonrise = response.data.forecast.forecastday[0].astro.moonrise;
     let moonriseElement = document.querySelector("#moonrise");
-    moonriseElement.innerHTML = ` ${moonrise}`;
+    moonriseElement.innerHTML = `${moonrise}`;
 
     let moonset = response.data.forecast.forecastday[0].astro.moonset;
     let moonsetElement = document.querySelector("#moonset");
-    moonsetElement.innerHTML = ` ${moonset}`;
+    moonsetElement.innerHTML = `${moonset}`;
 
     let humidity = response.data.current.humidity;
     let humidityElement = document.querySelector("#humidity");
     humidityElement.innerHTML = ` ${humidity}%`;
 
-    let highTemp = response.data.forecast.forecastday[0].day.maxtemp_c;
+    let highTemp = Math.round(response.data.forecast.forecastday[0].day.maxtemp_c);
     let highTempElement = document.querySelector("#high-temp");
     highTempElement.innerHTML = `${highTemp}°C`;
 
-    let lowTemp = response.data.forecast.forecastday[0].day.mintemp_c;
+    let lowTemp = Math.round(response.data.forecast.forecastday[0].day.mintemp_c);
     let lowTempElement = document.querySelector("#low-temp");
     lowTempElement.innerHTML = `${lowTemp}°C`;
 
@@ -231,7 +267,7 @@ function showTodaysData(response) {
 function search(city) {
     let apiKey = "900cc2ae081d424d98e125751222304";
     let apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=no&alerts=no`;
-//https://api.weatherapi.com/v1/forecast.json?key=900cc2ae081d424d98e125751222304&q=Perth&days=7&aqi=no&alerts=no
+//https://api.weatherapi.com/v1/forecast.json?key=900cc2ae081d424d98e125751222304&q=Texas&days=7&aqi=no&alerts=no
 
     axios.get(apiUrl).then(showTodaysData);
 }
@@ -269,4 +305,4 @@ toggleCelcius.addEventListener("click", convertUnitC);
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("Rio De Janeiro");
+search("Texas");
