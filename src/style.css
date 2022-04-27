@@ -23,13 +23,11 @@ body {
 .forecast-title {
   font-size: 20px;
   font-weight: bold;
-  }  
-.rise-set {
-  margin-left: 7px;
-}    
+  }    
 .today-forecast {
   text-align: center;
 }
+
 
 /*CELCIUS TO FAHRENHEIT TOGGLE    */
 .label {
@@ -112,6 +110,7 @@ body {
 }
 #sunrise-icon, #sunset-icon, #moonrise, #moonset {
   display: inline-block;
+  margin: 20px 0px;
 }
 /*HOURLY DATA */
 .scrolling-wrapper {
