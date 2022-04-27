@@ -168,22 +168,24 @@ function showTodaysData(response) {
 	
 	//hourly forecast starting from 05:00am
 
+    let hourForecast = response.data.forecast.forecastday;
+
     let hourElement = document.querySelector("#hourly-data");
-    let hour = response.data.forecast;
+     
+
     
+
     let hourHTML = "";
     
-    hourHTML = hourHTML + `<div class="card" id="hour">
-    <div class="the-hourly-prediction">Clear Sky</div>
-    <h2>05:00</h2><div id="hour-five"></div></div>`;
-
-    hourHTML = hourHTML + `<div class="card" id="hour">
-    <div class="the-hourly-prediction">Clear Sky</div>
-    <h2>05:00</h2><div id="hour-five"></div></div>`;
+    hourForecast.forEach(function (forecastday) {
+        
+        hourHTML = hourHTML + `
+        <div class="card" id="hour">
+        <div class="the-hourly-prediction">Clear Sky</div>
+        <h2>HOUR</h2><div id="hour-five">${forecastday.hour[0].temp_c}</div></div>
+        `;
+    });
     
-    hourHTML = hourHTML + `<div class="card" id="hour">
-    <div class="the-hourly-prediction">Clear Sky</div>
-    <h2>05:00</h2><div id="hour-five"></div></div>`;
 
     hourElement.innerHTML = hourHTML;
    
