@@ -2,13 +2,13 @@ body {
     height: 400vh;
     font-family: 'Nunito', sans-serif;
     color: #9900ff;   
-    
+    /*NOTEPAD BACKGROUND */
     background-color: #e1e1e5;
     opacity: 0.8;
     background-size: 20px 20px;
     background-image:  repeating-linear-gradient(0deg, #009dff32, #009dff42 1px, #e1e1e5 1px, #e1e1e5);
       }
-
+/*HEAD OF DOCUMENT    */
 .title {
   font-family: 'Baloo 2', cursive;
   color: #000000;
@@ -21,66 +21,69 @@ body {
     font-size: 25px;
     text-shadow: 2px 2px 2px #52525263;
     }
-    .label {
-      display: inline-flex;
-      align-items: center;
-      cursor: pointer;
-      color: #001eff;
+.forecast-title {
+  font-size: 18px;
+  font-weight: bold;
+  }    
+
+/*CELCIUS TO FAHRENHEIT TOGGLE    */
+.label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+.label-text-right {
+  margin-left: 4px;
+}
+.label-text-left {
+  margin-right: 10px;
+}
+#fahrenheit-label, #celcius-label {
+  animation: glow 2s infinite alternate;
+  color: #000d74a5;
+}
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 2px #84f1fd, 0 0 4px #84f1fd, 0 0 6px #84f1fd, 0 0 8px #84f1fd, 0 0 10px #84f1fd, 0 0 12px #84f1fd, 0 0 14px #84f1fd;
     }
-    .label-text-right {
-      margin-left: 4px;
+    to {
+      text-shadow: 0 0 3px #fff, 0 0 5px #84f1fd, 0 0 9x #ffffff, 0 0 11px #ffffff, 0 0 13px #84f1fd, 0 0 5px #84f1fd, 0 0 7px #84f1fd;
     }
-    .label-text-left {
-      margin-right: 10px;
-    }
-    #fahrenheit-label, #celcius-label {
-      animation: glow 2s infinite alternate;
-      color: #000d74a5;
-    }
-    
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 2px #84f1fd, 0 0 4px #84f1fd, 0 0 6px #84f1fd, 0 0 8px #84f1fd, 0 0 10px #84f1fd, 0 0 12px #84f1fd, 0 0 14px #84f1fd;
-      }
-      to {
-        text-shadow: 0 0 3px #fff, 0 0 5px #84f1fd, 0 0 9x #ffffff, 0 0 11px #ffffff, 0 0 13px #84f1fd, 0 0 5px #84f1fd, 0 0 7px #84f1fd;
-      }
-    }
+  }
         
-    .toggle {
-      isolation: isolate;
-      position: relative;
-      height: 20px;
-      width: 50px;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow:
-        -8px -4px 8px 0px #8399fb,
-        8px 4px 12px 0px #347bed,
-        4px 4px 4px 0px #347bed inset,
-        -4px -4px 4px 0px #8399fb inset;
-    }
+.toggle {
+  isolation: isolate;
+  position: relative;
+  height: 20px;
+  width: 50px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow:
+    -8px -4px 8px 0px #8399fb,
+    8px 4px 12px 0px #347bed,
+    4px 4px 4px 0px #347bed inset,
+    -4px -4px 4px 0px #8399fb inset;
+}
+.toggle-state {
+  display: none;
+}
     
-    .toggle-state {
-      display: none;
-    }
-    
-    .indicator {
-      height: 100%;
-      width: 200%;
-      background: rgba(9, 101, 250, 0.336);
-      border-radius: 15px;
-      transform: translate3d(-75%, 0, 0);
-      transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
-      box-shadow:
-        -8px -4px 8px 0px #5064fa6b,
-        8px 4px 12px 0px #5064fa6b;
-    }
-    
-    .toggle-state:checked ~ .indicator {
-      transform: translate3d(25%, 0, 0);
-    }
-    
+.indicator {
+  height: 100%;
+  width: 200%;
+  background: rgba(9, 101, 250, 0.336);
+  border-radius: 15px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+  box-shadow:
+    -8px -4px 8px 0px #5064fa6b,
+    8px 4px 12px 0px #5064fa6b;
+}
+  
+.toggle-state:checked ~ .indicator {
+  transform: translate3d(25%, 0, 0);
+}
+/* CITY SEARCH BAR*/    
 #search-input {
     background: none;
     border: none;
@@ -99,6 +102,7 @@ body {
   -webkit-filter: drop-shadow(10px 10px 2px #00000063);
   filter: drop-shadow(10px 10px 2px #00000063);
 }
+/*WEATHER ICONS */
 .main-weather-icon {
   margin-top: 10px;
   margin-bottom: 5px;
@@ -109,55 +113,50 @@ body {
 }
 #sunrise-icon, #sunset-icon, #moonrise, #moonset {
   display: inline-block;
-  
-  
 }
-
+/*HOURLY DATA */
 .scrolling-wrapper {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    }::-webkit-scrollbar {
-        display: none;
-      }
-
-    .card {
-      display: inline-block;
-      width: 120px;
-      color: white;
-      background: none;
-      border: none;
-    }
-    #hour {
-      color: #001eff5e;
-    }
-    #hour:hover{
-      color: #001eff;
-      font-weight: bold;
-    }
-    .hourly-prediction {
-      font-family: 'Baloo 2', cursive;
-      font-size: 10px;
-      padding: 0px;
-    }
-    .h, .l, .weekday {
-      font-family: 'Baloo 2', cursive;
-    }
-    
-    .daily-prediction {
-      font-size: 12px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  }::-webkit-scrollbar {
+      display: none;
     }
 
-    
- 
+  .card {
+    display: inline-block;
+    width: 120px;
+    color: white;
+    background: none;
+    border: none;
+  }
+  #hour {
+    color: #001eff5e;
+  }
+  #hour:hover{
+    color: #001eff;
+    font-weight: bold;
+  }
+  .hourly-prediction {
+    font-family: 'Baloo 2', cursive;
+    font-size: 10px;
+    padding: 0px;
+  }
+  /*DAILY FORECAST */
+  .h, .l, .weekday {
+    font-family: 'Baloo 2', cursive;
+  }
+  
+  .daily-prediction {
+    font-size: 12px;
+  }
 .daily-forecast {
-    margin-bottom: 15px;
-    animation-duration: 3s;
-    animation-name: slidein;
-    overflow: hidden;
-    
+  margin-bottom: 15px;
+  animation-duration: 3s;
+  animation-name: slidein;
+  overflow: hidden;
   }
   @keyframes slidein {
     from {
@@ -175,8 +174,4 @@ body {
   } 
   
   
-  .forecast-title {
-      font-size: 18px;
-      font-weight: bold;
-  }
 
