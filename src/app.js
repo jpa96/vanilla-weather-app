@@ -33,7 +33,7 @@ function formatDate(timestamp) {
 
 function forecastDay(timestamp) {
     
-    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let days = ["S", "M", "T", "W", "T", "F", "S"];
     let date = new Date(timestamp);
     let day = days[date.getDay()];
     let formattedDate = `${day}`;
@@ -42,6 +42,8 @@ function forecastDay(timestamp) {
 
 function showTodaysData(response) {
     //DAILY FORECAST FOR 3 DAYS
+    
+
     let dayOne = document.querySelector("#day-1");
     dayOne.innerHTML = forecastDay(response.data.forecast.forecastday[0].date);
     
