@@ -216,7 +216,6 @@ function convertUnitC(){
 
     let mainTemperature = document.querySelector("#today-temperature");
     mainTemperature.innerHTML = `${celciusTemperature}°C`;
-
 }
 
 
@@ -232,4 +231,4 @@ toggleCelcius.addEventListener("click", convertUnitC);
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("Texas");
+search("Seattle");
