@@ -1,11 +1,11 @@
 body {
-    height: 400vh;
+    height: 320vh;
     font-family: 'Nunito', sans-serif;
     color: #9900ff;   
     /*NOTEPAD BACKGROUND */
     background-color: #e1e1e5;
     opacity: 0.8;
-    background-size: 20px 20px;
+    background-size: 20px 40px;
     background-image:  repeating-linear-gradient(0deg, #009dff32, #009dff42 1px, #e1e1e5 1px, #e1e1e5);
       }
 /*HEAD OF DOCUMENT    */
@@ -16,6 +16,7 @@ body {
   text-align: center;
 }
 .time-city {
+  padding: 15px 0;
   font-family: 'Baloo 2', cursive;
   color: #009c8f84;
   font-size: 22px;
@@ -26,9 +27,22 @@ body {
   }    
 .today-forecast {
   text-align: left;
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 2.5em;
+  }
+.today-condition {
+  margin-top: 40px;
+  font-family: 'Baloo 2', cursive;
+  font-size: 30px;
+  text-align: left;
 }
-
+.data {
+  margin-left: 10px;
+  font-weight: bold;
+}
+.head {
+  margin: 0 70px;
+}
 
 /*CELCIUS TO FAHRENHEIT TOGGLE
 .label {
@@ -102,8 +116,8 @@ body {
 }
 /*WEATHER ICONS */
 .main-weather-icon {
-  width: 80%;
-  margin-left: 40px;
+  width: 50%;
+  margin-left: 60px;
   margin-top: 20px;
   }
 #main-weather-icon, .weather-icon {
@@ -175,7 +189,7 @@ body {
 
   .card {
     display: inline-block;
-    width: 130px;
+    width: 150px;
     color: white;
     background: none;
     border: none;
@@ -220,13 +234,8 @@ body {
   .daily-forecast-col {
     margin-bottom: 20px;
   } 
-
-.blackboard {
-  margin-top: 60px;
-}
-
   .footer {
-    padding: 0 12px;
+    padding: 20px 12px;
   }
   
 
