@@ -25,7 +25,8 @@ body {
   font-weight: bold;
   }    
 .today-forecast {
-  text-align: center;
+  text-align: left;
+  font-size: 12px;
 }
 
 
@@ -101,8 +102,9 @@ body {
 }
 /*WEATHER ICONS */
 .main-weather-icon {
-  margin-top: 10px;
-  margin-bottom: 5px;
+  width: 80%;
+  margin-left: 40px;
+  margin-top: 20px;
   }
 #main-weather-icon, .weather-icon {
   -webkit-filter: drop-shadow(15px 15px 4px #222222);

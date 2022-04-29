@@ -1,7 +1,4 @@
 
-
-//WANT TO CHANGE OWN ICONS TO MATCH WEATHER CONDITION CODES OF API
-
 function formatTime(timestamp) {
     //calculate time ***WANT TO MAKE THE WEATHER TO BE IN REAL-TIME
     let time = new Date(timestamp);
@@ -188,7 +185,7 @@ function showTodaysData(response) {
     
 
     hourElement.innerHTML = hourHTML;
-   
+
 }
 
 function search(city) {
@@ -198,6 +195,7 @@ function search(city) {
 
     axios.get(apiUrl).then(showTodaysData);
 }
+
 function handleSubmit(event) {
     event.preventDefault();
     let searchInput = document.querySelector("#search-input");
@@ -205,18 +203,6 @@ function handleSubmit(event) {
     search(searchInput.value);
 }
 
-function convertUnitF() {
-    
-    let mainTemperature = document.querySelector("#today-temperature");
-    fahrenheitTemperature = Math.round(celciusTemperature * 9 / 5) + 32;
-    mainTemperature.innerHTML = `${fahrenheitTemperature}°F`;
-    }
-    
-function convertUnitC(){
-
-    let mainTemperature = document.querySelector("#today-temperature");
-    mainTemperature.innerHTML = `${celciusTemperature}°C`;
-}
 
 let celciusTemperature = null;
 
@@ -225,6 +211,21 @@ form.addEventListener("submit", handleSubmit);
 
 search("Seattle");
 
+
+
+/*
+function convertUnitF() {
+    
+    let mainTemperature = document.querySelector("#today-temperature");
+    fahrenheitTemperature = Math.round(celciusTemperature * 9 / 5) + 32;
+    mainTemperature.innerHTML = `${fahrenheitTemperature}°F`;
+    } 
+    
+function convertUnitC(){
+
+    let mainTemperature = document.querySelector("#today-temperature");
+    mainTemperature.innerHTML = `${celciusTemperature}°C`;
+}*/
 /*
 let toggleFahrenheit = document.querySelector("#fahrenheit-label");
 toggleFahrenheit.addEventListener("click", convertUnitF);
