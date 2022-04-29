@@ -218,17 +218,19 @@ function convertUnitC(){
     mainTemperature.innerHTML = `${celciusTemperature}°C`;
 }
 
-
-let toggleFahrenheit = document.querySelector("#fahrenheit-label");
-toggleFahrenheit.addEventListener("click", convertUnitF);
-
 let celciusTemperature = null;
-
-
-let toggleCelcius = document.querySelector("#celcius-label");
-toggleCelcius.addEventListener("click", convertUnitC);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Seattle");
+
+/*
+let toggleFahrenheit = document.querySelector("#fahrenheit-label");
+toggleFahrenheit.addEventListener("click", convertUnitF);
+
+
+
+
+let toggleCelcius = document.querySelector("#celcius-label");
+toggleCelcius.addEventListener("click", convertUnitC); */

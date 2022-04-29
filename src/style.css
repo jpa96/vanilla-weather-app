@@ -29,7 +29,7 @@ body {
 }
 
 
-/*CELCIUS TO FAHRENHEIT TOGGLE    */
+/*CELCIUS TO FAHRENHEIT TOGGLE
 .label {
   display: inline-flex;
   align-items: center;
@@ -171,6 +171,11 @@ body {
   .daily-forecast-col {
     margin-bottom: 20px;
   } 
+
+.blackboard {
+  margin-top: 60px;
+}
+
   .footer {
     padding: 0 12px;
   }
