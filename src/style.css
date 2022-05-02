@@ -1,5 +1,5 @@
 body {
-    height: 360vh;
+    height: 180vh;
     font-family: 'Nunito', sans-serif;
     color: #9900ff;   
     /*NOTEPAD BACKGROUND */
@@ -19,7 +19,7 @@ body {
   padding: 15px 0;
   font-family: 'Baloo 2', cursive;
   color: #009c8f84;
-  font-size: 22px;
+  font-size: 25px;
   }
 .forecast-title {
   font-size: 20px;
@@ -99,11 +99,13 @@ body {
 #search-input {
     background: none;
     border: none;
-    color: #009c8fbb;
+    color: #009c8f90;
     font-size: 12px;
+    font-family: 'Baloo 2', cursive;
 }
 #search-input::placeholder {
-  color: #009c8fbb;
+  color: #009c8f7f;
+  font-family: 'Baloo 2', cursive;
 }
 #search-button {
     font-size: 12px;
@@ -196,8 +198,10 @@ body {
     border: none;
   }
   #hour {
+    margin-bottom: 20px;
     color: #001eff5e;
     text-align: center;
+    padding: 5px;
   }
   #hour:hover{
     color: #001eff;
@@ -206,7 +210,7 @@ body {
   .the-hourly-prediction {
     font-family: 'Baloo 2', cursive;
     font-size: 10px;
-    padding: 0px 15px;
+    padding: 5px 15px;
   }
   /*DAILY FORECAST */
   .h, .l, .weekday {
@@ -234,12 +238,13 @@ body {
     }
   }
   .daily-forecast-col {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   } 
   .footer {
-    padding-top: 100px;
+    padding-top: 280px;
     font-size: 10px;
-    margin-bottom: -100px;
+    text-align: center;
+    
   }
   .footer a {
     text-decoration: none;
