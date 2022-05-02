@@ -1,5 +1,5 @@
 body {
-    height: 320vh;
+    height: 360vh;
     font-family: 'Nunito', sans-serif;
     color: #9900ff;   
     /*NOTEPAD BACKGROUND */
@@ -116,10 +116,11 @@ body {
 }
 /*WEATHER ICONS */
 .main-weather-icon {
-  width: 50%;
-  margin-left: 100px;
-  margin-top: 20px;
-  }
+  width: 40%;
+  margin: auto;
+  display: block;
+  
+}
 #main-weather-icon, .weather-icon {
   -webkit-filter: drop-shadow(15px 15px 4px #222222);
   filter: drop-shadow(15px 15px 4px #22222279);
@@ -189,22 +190,23 @@ body {
 
   .card {
     display: inline-block;
-    width: 150px;
+    
     color: white;
     background: none;
     border: none;
   }
   #hour {
     color: #001eff5e;
+    text-align: center;
   }
   #hour:hover{
     color: #001eff;
     font-weight: bold;
   }
-  .hourly-prediction {
+  .the-hourly-prediction {
     font-family: 'Baloo 2', cursive;
     font-size: 10px;
-    padding: 0px;
+    padding: 0px 15px;
   }
   /*DAILY FORECAST */
   .h, .l, .weekday {
@@ -235,7 +237,12 @@ body {
     margin-bottom: 20px;
   } 
   .footer {
-    padding: 20px 12px;
+    padding-top: 100px;
+    font-size: 10px;
+    margin-bottom: -100px;
+  }
+  .footer a {
+    text-decoration: none;
   }
   
 
