@@ -1,5 +1,5 @@
 body {
-    height: 180vh;
+    
     font-family: 'Nunito', sans-serif;
     color: #9900ff;   
     /*NOTEPAD BACKGROUND */
@@ -224,17 +224,6 @@ body {
   margin-bottom: 15px;
   overflow: hidden;
   }
-  @keyframes slidein {
-    from {
-      margin-left: -100%;
-      width: 100%;
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
   .daily-forecast-col {
     margin-bottom: 30px;
   } 
@@ -270,14 +259,14 @@ body {
   }
   @keyframes slidein {
     0% {
-      margin-right: -100%;
-      transform: translateY(100px);
+      
+      transform: translateX(100px);
       opacity: 0;
       
     }
     100% {
-      margin-right: 0%;
-      transform: translateY(0);
+      
+      transform: translateX(0);
       opacity: 1;
       
     }
