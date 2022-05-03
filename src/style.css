@@ -127,9 +127,9 @@ body {
   -webkit-filter: drop-shadow(15px 15px 4px #222222);
   filter: drop-shadow(15px 15px 4px #22222279);
 }
-#sunrise-icon, #sunset-icon, #moonrise, #moonset {
+#sunrise-icon, #sunset-icon, #moonrise-icon, #moonset-icon {
   display: inline-block;
-  margin: 20px 0px;
+  margin: 15px 0px;
 }
 /*HOURLY DATA */
 .hour-forecast-title {
