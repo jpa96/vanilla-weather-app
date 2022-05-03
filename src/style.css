@@ -222,8 +222,6 @@ body {
   }
 .daily-forecast {
   margin-bottom: 15px;
-  animation-duration: 3s;
-  animation-name: slidein;
   overflow: hidden;
   }
   @keyframes slidein {
@@ -249,5 +247,38 @@ body {
   .footer a {
     text-decoration: none;
   }
+ 
+  .reveal {
+    position: relative;
+    opacity: 0;
+  }
   
-
+  .reveal.active {
+    opacity: 1;
+  }  
+  .active.slide-rightA {
+    animation: slidein 2.5s ease-in;
+  }
+  .active.slide-rightB {
+    animation: slidein 2.8s ease-in;
+  }
+  .active.slide-rightC {
+    animation: slidein 3s ease-in;
+  }
+  .active.slide-rightD {
+    animation: slidein 3.3s ease-in;
+  }
+  @keyframes slidein {
+    0% {
+      margin-right: -100%;
+      transform: translateY(100px);
+      opacity: 0;
+      
+    }
+    100% {
+      margin-right: 0%;
+      transform: translateY(0);
+      opacity: 1;
+      
+    }
+  }
